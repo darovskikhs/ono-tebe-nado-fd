@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px 96px;
+  padding: 92px 50px 90px;
 }
 
 .header__menu-list {
@@ -21,11 +21,15 @@
   margin-left: 3px;
 }
 
+.header__menu-link--active {
+  text-decoration: none;
+}
+
 .header__logo {
   width: 148px;
 }
 
-.header__info {
+.address {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -46,16 +50,11 @@
   background-color: rgba(0 0 0 / .6);
 }
 
-.link--without-underline {
-  text-decoration: none;
-}
-
 .cover {
   position: relative;
-  margin-top: -6px;
   min-height: 757px;
   background: url('../images/cover.jpg') no-repeat center / cover;
-  z-index: -2;
+  z-index: 0;
 }
 
 .cover__title {
@@ -71,24 +70,24 @@
   display: block;
 }
 
-.cover__title--first-word {
+.cover__title--left {
   padding-left: 50px;
   padding-top: 165px;
 }
 
-.cover__title--second-word {
+.cover__title--center {
   text-align: center;
   padding-top: 20px;
   padding-left: 30px;
 }
 
-.cover__title--third-word {
+.cover__title--right {
   text-align: right;
   padding-top: 20px;
   padding-right: 20px;
 }
 
-.cover__wrapper {
+.cover__extra {
   margin-top: 106px;
   padding-inline: 50px;
   display: flex;
@@ -103,10 +102,11 @@
 }
 
 .cover__description {
-  word-spacing: 18.5px;
+  word-spacing: 18.6px;
 }
 
 .cover__button {
+  cursor: pointer;
   background-color: transparent;
   border: 1px solid #fff;
   padding: 11px 32px 12px 31px;
@@ -171,15 +171,15 @@
   margin-bottom: 48px;
 }
 
-.lots__list-item--first {
+.lots__list-item:first-child {
   background: url('../images/card-lot-01.jpg') no-repeat center / cover;
 }
 
-.lots__list-item--second {
+.lots__list-item:nth-child(2) {
   background: url('../images/card-lot-02.jpg') no-repeat center / cover;
 }
 
-.lots__list-item--third {
+.lots__list-item:last-child {
   background: url('../images/card-lot-03.jpg') no-repeat center / cover;
 }
 
@@ -187,7 +187,6 @@
   display: grid;
   grid-template-columns: 334px auto;
   column-gap: 25px;
-  min-height: 595px;
   margin-top: 120px;
   padding: 35px 24px 0 24px;
 }
@@ -200,13 +199,14 @@
   width: 240px;
   height: 240px;
   background-color: #000;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .about__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-start;
+  margin-top: 100px;
   row-gap: 100px;
 }
 
@@ -222,7 +222,7 @@
   row-gap: 24px;
 }
 
-.about__descrption {
+.about__description {
   line-height: 24px;
 }
 
@@ -234,16 +234,9 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-style: normal;
+.footer__address {
+  justify-self: start;
   width: 260px;
-  font-size: 18px;
-  line-height: 24.3px;
-  margin-bottom: 6px;
-  padding-left: 1px;
 }
 
 .footer__menu-list {
@@ -252,6 +245,10 @@
   flex-direction: column;
   font-size: 18px;
   list-style: none;
+}
+
+.footer__menu-link--active {
+  text-decoration: none;
 }
 
 .footer__soc1als-list {
