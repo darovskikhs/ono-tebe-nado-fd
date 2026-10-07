@@ -171,15 +171,15 @@
   margin-bottom: 48px;
 }
 
-.lots__list-item:first-child {
+.lots__list-item--film {
   background: url('../images/card-lot-01.jpg') no-repeat center / cover;
 }
 
-.lots__list-item:nth-child(2) {
+.lots__list-item--book {
   background: url('../images/card-lot-02.jpg') no-repeat center / cover;
 }
 
-.lots__list-item:last-child {
+.lots__list-item--picture {
   background: url('../images/card-lot-03.jpg') no-repeat center / cover;
 }
 
